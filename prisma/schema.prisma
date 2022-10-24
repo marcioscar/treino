@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type HistoricoTreinos {
+  data   DateTime @db.Date
+  treino String?
+}
+
+type TreinosExercicios {
+  Repeticoes String
+  carga      String
+  id         String?
+  nome       String
+  obs        String
+}
+
+model historico {
+  id      String             @id @default(auto()) @map("_id") @db.ObjectId
+  aluno   Int                @unique
+  treinos HistoricoTreinos[]
+}
+
+model treinos {
+  id         String              @id @default(auto()) @map("_id") @db.ObjectId
+  exercicios TreinosExercicios[]
+  grupo      String
+  semana     Int
+}
