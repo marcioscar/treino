@@ -1,7 +1,19 @@
 import { Navbar } from "~/components/Navbar";
 import { FaMapMarkedAlt, FaWhatsapp, FaClock } from "react-icons/fa";
+import Aulas from "~/components/Aulas";
+import type { LoaderFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
+import { getAulas } from "~/utils/aulas.server";
+import { useLoaderData } from "@remix-run/react";
+
+export const loader: LoaderFunction = async ({ request }) => {
+  const TodasAulas = await getAulas();
+  return json({ TodasAulas });
+};
 
 export default function Index() {
+  const { TodasAulas } = useLoaderData();
+  // console.log(TodasAulas);
   return (
     <div className="text-gray-600 body-font">
       <Navbar />
@@ -31,7 +43,7 @@ export default function Index() {
 
       <div className="flex mt-1 flex-wrap -m-4">
         <div className="p-2 w-full md:w-1/2">
-          <div className="flex rounded-lg h-full bg-amber-50 shadow-lg  p-8 flex-col">
+          <div className="flex rounded-lg h-full bg-stone-100 shadow-lg  p-8 flex-col">
             <div className="flex items-center mb-3">
               <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-orange-500 text-white flex-shrink-0">
                 <FaMapMarkedAlt />
@@ -49,7 +61,7 @@ export default function Index() {
                   href="https://wa.me/5561993190568"
                   className="mt-2  font-semibold inline-flex items-center "
                 >
-                  <FaWhatsapp className="text-green-600   text-2xl mr-2 " />
+                  <FaWhatsapp className="text-green-600 text-2xl mr-2 " />
                   (61) 99319-0568
                 </a>
                 <a href="https://wa.me/5561993190568">
@@ -63,7 +75,7 @@ export default function Index() {
           </div>
         </div>
         <div className="p-2 w-full md:w-1/2">
-          <div className="flex rounded-lg h-full bg-amber-50 shadow-lg p-8 flex-col">
+          <div className="flex rounded-lg h-full bg-stone-100 shadow-lg p-8 flex-col">
             <div className="flex items-center mb-3">
               <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
                 <FaClock />
@@ -89,6 +101,7 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <Aulas aulas={TodasAulas} />
     </div>
   );
 }

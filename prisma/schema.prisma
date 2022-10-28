@@ -32,3 +32,14 @@ model treinos {
   grupo      String
   semana     Int
 }
+
+model classes {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  start  String
+  classe String
+  finish String
+  turma  String
+  icon   String
+  plano  String
+  days   Int[]
+}
