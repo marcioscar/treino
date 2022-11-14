@@ -5,6 +5,7 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getAulas } from "~/utils/aulas.server";
 import { useLoaderData } from "@remix-run/react";
+import Eventos from "~/components/Eventos";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const TodasAulas = await getAulas();
@@ -102,6 +103,7 @@ export default function Index() {
         </div>
       </div>
       <Aulas aulas={TodasAulas} />
+      <Eventos />
     </div>
   );
 }
