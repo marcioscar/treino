@@ -30,14 +30,14 @@ export function Navbar() {
           >
             TREINOS
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/cadastro"
             className={({ isActive }) =>
               isActive ? activeClassName : NoaActiveClassName
             }
           >
             CADASTRO
-          </NavLink>
+          </NavLink> */}
         </div>
       </div>
     </nav>
