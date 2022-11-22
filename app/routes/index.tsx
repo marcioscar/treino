@@ -5,7 +5,6 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getAulas } from "~/utils/aulas.server";
 import { useLoaderData } from "@remix-run/react";
-import Eventos from "~/components/Eventos";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const TodasAulas = await getAulas();
@@ -18,6 +17,29 @@ export default function Index() {
   return (
     <>
       <Navbar />
+      <div className="h-80 xl:h-5/6 w-full bg-gradient-to-tl from-black to-orange-500 relative">
+        <img
+          alt="content"
+          className="w-full h-full object-cover absolute mix-blend-overlay "
+          src="/fundo_novo.jpg"
+        />
+        <div className="pt-10 xl:pt-20 xl:pl-10 ">
+          <h2 className="text-4xl xl:text-6xl font-extrabold shadow-xl text-white md:text-3xl">
+            Quattor Academia
+          </h2>
+          <div className="text-md xl:text-2xl font-bold text-white ">
+            Jornada de Resultados Reais
+          </div>
+        </div>
+
+        <div className=" pl-32 pt-8 flex justify-end items-end">
+          <img
+            alt="logo"
+            src="/15anos.svg"
+            className="mt-10 w-60 xl:w-96 xl:mt-0  "
+          />
+        </div>
+      </div>
       <div className="bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6]">
         {/* <div className="bg-gradient-to-r from-[#8e9eab] to-[#eef2f3]"> */}
         <div className="text-gray-600 body-font bg-no-repeat min-h-screen bg-contain bg-center bg-[url('/bola50.svg')]">
