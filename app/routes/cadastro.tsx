@@ -85,7 +85,7 @@ export default function Cadastro() {
                             MEMBROS SUPERIORES 1
                           </option>
                           <option value="COSTAS">COSTAS</option>
-                          <option value="MEMBROS SUPERIORES 1">
+                          <option value="MEMBROS SUPERIORES 2">
                             MEMBROS SUPERIORES 2
                           </option>
                           <option value="BICEPS">BICEPS</option>
