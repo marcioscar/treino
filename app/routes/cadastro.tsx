@@ -120,12 +120,11 @@ export default function Cadastro() {
                           className="rounded-md border-2 form-control block
                           w-full "
                         >
-                          <option value="42">42 - (17/10 a 23/10)</option>
-                          <option value="43">43 - (24/10 a 30/10)</option>
-                          <option value="44">44 - (31/10 a 06/11)</option>
-                          <option value="45">45 - (07/11 a 13/11)</option>
-                          <option value="46">46 - (14/11 a 20/11)</option>
-                          <option value="47">47 - (21/11 a 27/11)</option>
+                          <option value="48">48 - (21/11 a 27/11)</option>
+                          <option value="49">49 - (28/11 a 04/12)</option>
+                          <option value="50">50 - (05/11 a 11/12)</option>
+                          <option value="51">51 - (12/11 a 17/12)</option>
+                          <option value="52">52 - (18/11 a 24/12)</option>
                         </select>
                         <Errors className="text-red-500" />
                       </div>
