@@ -21,7 +21,7 @@ export default function Aulas(props: any) {
 
   const [procuraAula, setProcuraAula] = useState("");
 
-  const filtrada = aulas.filter((aulas:any) =>
+  const filtrada = aulas.filter((aulas: any) =>
     aulas.turma.toLowerCase().includes(procuraAula.toLowerCase())
   );
 
@@ -55,13 +55,13 @@ export default function Aulas(props: any) {
               {procuraAula.length > 0 && (
                 // <div className="overflow-x-auto relative">
                 <div>
-                  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                  <table className="w-full table-fixed text-sm text-left text-gray-500 dark:text-gray-400">
                     <thead className="text-xs  text-gray-700 uppercase bg-slate-300/50 dark:bg-gray-700 dark:text-gray-400">
                       <tr className="rounded-lg">
                         <th scope="col" className=" px-6 py-2 ">
                           Aulas
                         </th>
-                        <th scope="col" className=" px-6 py-2">
+                        <th scope="col" className="  px-6 py-2">
                           Horário
                         </th>
                         <th scope="col" className=" ">
@@ -123,7 +123,7 @@ export default function Aulas(props: any) {
                     <th scope="col" className="px-6 py-2 ">
                       Aulas
                     </th>
-                    <th scope="col" className="px-6 py-2">
+                    <th scope="col" className="py-2">
                       Horário
                     </th>
                   </tr>
@@ -142,7 +142,7 @@ export default function Aulas(props: any) {
                         />
                         {aula.turma}
                       </th>
-                      <td className="py-2 px-6 text-xs md:text-base  ">
+                      <td className="py-2 text-xs md:text-base  ">
                         {aula.start} - {aula.finish}
                       </td>
                     </tr>
