@@ -14,96 +14,76 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function Index() {
   const { TodasAulas } = useLoaderData();
-  // console.log(TodasAulas);
+
   return (
-    <div className="text-gray-600 body-font">
+    <>
       <Navbar />
-      <div className="h-80 xl:h-5/6 w-full bg-gradient-to-tl from-black to-orange-500 relative">
-        <img
-          alt="content"
-          className="w-full h-full object-cover absolute mix-blend-overlay "
-          src="/fundo_novo.jpg"
-        />
-        <div className="pt-10 xl:pt-20 xl:pl-10 ">
-          <h2 className="text-4xl xl:text-6xl font-extrabold shadow-xl text-white md:text-3xl">
-            Quattor Academia
-          </h2>
-          <div className="text-md xl:text-2xl font-bold text-white ">
-            Jornada de Resultados Reais
-          </div>
-        </div>
+      <div className="bg-gradient-to-r from-[#2BC0E4] to-[#EAECC6]">
+        {/* <div className="bg-gradient-to-r from-[#8e9eab] to-[#eef2f3]"> */}
+        <div className="text-gray-600 body-font bg-no-repeat min-h-screen bg-contain bg-center bg-[url('/bola50.svg')]">
+          <div className="container mx-auto content-center  py-6 px-2 md:px-0 md:grid md:gap-x-6  md:gap-y-4 md:grid-cols-3">
+            <div className="bg-white/75  py-6 mb-2 flex flex-col items-center rounded-lg  drop-shadow-2xl  min-h-96 max-h-96">
+              <div className="flex  items-center mb-3">
+                <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-orange-500 text-white flex-shrink-0">
+                  <FaMapMarkedAlt />
+                </div>
+                <h2 className="text-gray-900 text-lg title-font font-medium">
+                  Onde Estamos
+                </h2>
+              </div>
 
-        <div className=" pl-32 pt-8 flex justify-end items-end">
-          <img
-            alt="logo"
-            src="/15anos.svg"
-            className="mt-10 w-60 xl:w-96 xl:mt-0  "
-          />
-        </div>
-      </div>
-
-      <div className="flex mt-1 flex-wrap -m-4">
-        <div className="p-2 w-full md:w-1/2">
-          <div className="flex rounded-lg h-full bg-stone-100 shadow-lg  p-8 flex-col">
-            <div className="flex items-center mb-3">
-              <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-orange-500 text-white flex-shrink-0">
-                <FaMapMarkedAlt />
+              <div className="text-center ">
+                <p className="font-semibold">Rua 5 Sul - Águas Claras - DF</p>
+                <div className=" ">
+                  <a
+                    href="https://wa.me/5561993190568"
+                    className="mt-2  font-semibold inline-flex items-center "
+                  >
+                    <FaWhatsapp className="text-green-600 text-2xl mr-2 " />
+                    (61) 99319-0568
+                  </a>
+                  <a href="https://wa.me/5561993190568">
+                    <button className="bg-green-400 tracking-tighter ml-5 px-2 py-1  text-white inline-flex items-center space-x-2 rounded">
+                      <FaWhatsapp />
+                      <span>Aula experimental</span>
+                    </button>
+                  </a>
+                </div>
               </div>
-              <h2 className="text-gray-900 text-lg title-font font-medium">
-                Onde Estamos
-              </h2>
-            </div>
-            <div className="flex-grow text-center ">
-              <p className="leading-relaxed font-bold">
-                Rua 5 Sul - Araucárias - Águas Claras - DF
-              </p>
-              <div className=" ">
-                <a
-                  href="https://wa.me/5561993190568"
-                  className="mt-2  font-semibold inline-flex items-center "
-                >
-                  <FaWhatsapp className="text-green-600 text-2xl mr-2 " />
-                  (61) 99319-0568
-                </a>
-                <a href="https://wa.me/5561993190568">
-                  <button className="bg-green-600 tracking-tighter ml-5 px-2 py-1  text-white inline-flex items-center space-x-2 rounded">
-                    <FaWhatsapp />
-                    <span>Aula experimental</span>
-                  </button>
-                </a>
+              <div className="flex mt-10  items-center mb-3">
+                <div className="w-8 h-8  mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
+                  <FaClock />
+                </div>
+                <h2 className="text-gray-900 text-lg title-font font-medium">
+                  Horário de Funcionamento
+                </h2>
+              </div>
+              <div className="flex-grow text-center">
+                <p className="leading-relaxed ">
+                  <span className=" text-gray-900 ">Segunda a Sexta:</span>{" "}
+                  6:00h às 23:00h
+                </p>
+                <p className="leading-relaxed  ">
+                  <span className=" text-gray-900 ">Sábados e Feriados:</span>{" "}
+                  8:00h às 12:00h
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="p-2 w-full md:w-1/2">
-          <div className="flex rounded-lg h-full bg-stone-100 shadow-lg p-8 flex-col">
-            <div className="flex items-center mb-3">
-              <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-blue-500 text-white flex-shrink-0">
-                <FaClock />
-              </div>
-              <h2 className="text-gray-900 text-lg title-font font-medium">
-                Horário de Funcionamento
-              </h2>
+            <div className="bg-white/75 overflow-auto rounded-lg mb-2 max-h-96 min-h-96 drop-shadow-2xl col-span-2">
+              <Aulas aulas={TodasAulas} />
             </div>
-            <div className="flex-grow text-center">
-              <p className="leading-relaxed  text-red-500 font-bold">
-                <span className="font-semibold text-gray-900 ">
-                  Segunda a Sexta:
-                </span>{" "}
-                6:00h às 23:00h
-              </p>
-              <p className="leading-relaxed text-red-500 font-bold">
-                <span className="font-semibold text-gray-900 ">
-                  Sábados e Feriados:
-                </span>{" "}
-                8:00h às 12:00h
-              </p>
+            <div className="mb-2 ">
+              <img src="/black_musc.jpg" alt="black musc" />
+            </div>
+            <div className="mb-2">
+              <img src="/black_pillates.jpg" alt="black pilates" />
+            </div>
+            <div className="mb-2">
+              <img src="/black_judo.jpg" alt="black pilates" />
             </div>
           </div>
         </div>
       </div>
-      <Aulas aulas={TodasAulas} />
-      <Eventos />
-    </div>
+    </>
   );
 }

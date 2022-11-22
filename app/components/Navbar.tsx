@@ -37,6 +37,14 @@ export function Navbar() {
             }
           >
             CADASTRO
+          </NavLink>
+          <NavLink
+            to="/cadaulas"
+            className={({ isActive }) =>
+              isActive ? activeClassName : NoaActiveClassName
+            }
+          >
+            AULAS
           </NavLink> */}
         </div>
       </div>
