@@ -709,6 +709,10 @@ video {
   margin-right: 2rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -769,6 +773,10 @@ video {
   height: 1.25rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -825,6 +833,10 @@ video {
   width: 5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -851,6 +863,10 @@ video {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-2 {
@@ -1025,10 +1041,6 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-l-4 {
-  border-left-width: 4px;
-}
-
 .border-l-2 {
   border-left-width: 2px;
 }
@@ -1039,6 +1051,10 @@ video {
 
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-l-4 {
+  border-left-width: 4px;
 }
 
 .border-solid {
@@ -1055,14 +1071,14 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
-.border-red-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(185 28 28 / var(--tw-border-opacity));
-}
-
 .border-slate-100 {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
+}
+
+.border-red-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
 }
 
 .bg-gray-50 {
@@ -1131,11 +1147,6 @@ video {
 .bg-amber-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 251 235 / var(--tw-bg-opacity));
-}
-
-.bg-amber-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
@@ -1230,6 +1241,10 @@ video {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-6 {
@@ -1481,11 +1496,6 @@ video {
   color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
-.text-amber-700 {
-  --tw-text-opacity: 1;
-  color: rgb(180 83 9 / var(--tw-text-opacity));
-}
-
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
@@ -1494,6 +1504,11 @@ video {
 .text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .line-through {
@@ -1531,6 +1546,11 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-red-600 {
+  --tw-shadow-color: #dc2626;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .drop-shadow-2xl {

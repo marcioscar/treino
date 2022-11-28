@@ -1,20 +1,25 @@
 import { prisma } from "./prisma.server";
 import axiosAPI from "axios";
+import fetch from "@remix-run/web-fetch";
 const EVO_AUTH = process.env.NEXT_PUBLIC_EVO_AUTH;
 
 export const getAluno = async (matricula: number) => {
-  const aluno = await axiosAPI(
-    `https://evo-integracao.w12app.com.br/api/v1/members/${matricula}`,
+  try {
+    const aluno = await fetch(
+      `https://evo-integracao.w12app.com.br/api/v1/members/${matricula}`,
 
-    {
-      method: "GET",
-      headers: {
-        Authorization: "Basic " + btoa(EVO_AUTH as string),
-      },
-    }
-  );
-
-  return aluno.data;
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Basic " + btoa(EVO_AUTH as string),
+        },
+      }
+    );
+    return aluno.json();
+  } catch (error) {
+    console.log("teste");
+    throw error;
+  }
 };
 
 export const getTreinos = async (semana: number) => {

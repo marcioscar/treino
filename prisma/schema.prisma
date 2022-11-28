@@ -15,7 +15,7 @@ type HistoricoTreinos {
 type TreinosExercicios {
   Repeticoes String
   carga      String
-  id         String?
+  execid     String?
   nome       String
   obs        String
 }

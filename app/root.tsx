@@ -9,6 +9,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import styles from "./tailwind.css";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Quattor Academia",
