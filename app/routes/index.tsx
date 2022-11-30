@@ -94,15 +94,15 @@ export default function Index() {
             <div className="bg-white/75 overflow-auto rounded-lg mb-2 max-h-96 min-h-96 drop-shadow-2xl col-span-2">
               <Aulas aulas={TodasAulas} />
             </div>
-            <div className="mb-2 ">
-              <img src="/black_musc.jpg" alt="black musc" />
+            <div className="mb-2  ">
+              <img src="/feriado.jpg" alt="feriado" className="rounded-lg" />
             </div>
-            <div className="mb-2">
+            {/* <div className="mb-2">
               <img src="/black_pillates.jpg" alt="black pilates" />
             </div>
             <div className="mb-2">
               <img src="/black_judo.jpg" alt="black pilates" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

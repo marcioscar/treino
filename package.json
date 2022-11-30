@@ -24,8 +24,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.37.0",
+    "react-hot-toast": "^2.4.0",
     "react-icons": "^4.4.0",
-    "react-toastify": "^9.1.1",
     "remix-forms": "^0.18.2",
     "uuid": "^9.0.0",
     "zod": "^3.19.1"

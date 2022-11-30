@@ -1,8 +1,11 @@
-import { ActionFunction, json } from "@remix-run/node";
+import type { ActionFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
-import { Form, useActionData, useCatch, useTransition } from "@remix-run/react";
+import { Form, useCatch, useTransition } from "@remix-run/react";
 import { Navbar } from "~/components/Navbar";
 import { getAluno } from "../../utils/aluno.server";
+import toast, { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
 
 export const action: ActionFunction = async ({ request }) => {
   const form = await request.formData();
@@ -13,14 +16,21 @@ export const action: ActionFunction = async ({ request }) => {
   const aluno = await getAluno(matricula);
 
   if (!aluno.idMember) {
-    throw json({ message: "Aluno não Encontrado" }, { status: 404 });
+    throw json(
+      { message: "Aluno não Encontrado" },
+      { status: 401, statusText: Math.floor(Math.random() * 15).toString() }
+    );
   }
   if (aluno.membershipStatus === "Inactive") {
-    throw json({ message: "Aluno Inativo" }, { status: 401 });
+    throw json(
+      { message: "Aluno Inativo" },
+      { status: 401, statusText: Math.floor(Math.random() * 15).toString() }
+    );
   }
 
   return redirect(`/aluno/${aluno.idMember}`);
 };
+
 
 export default function Index() {
   const transition = useTransition();
@@ -28,7 +38,6 @@ export default function Index() {
   return (
     <div className="h-screen w-full bg-stone-100 font-Roboto ">
       <Navbar />
-
       <div className="h-full mt-24 items-center flex flex-col gap-y-4">
         <Form method="post" className="rounded-2xl bg-stone-200 p-6 w-96">
           <label htmlFor="matricula" className="text-stone-600 font-semibold ">
@@ -60,12 +69,28 @@ export default function Index() {
 export function CatchBoundary() {
   const transition = useTransition();
   const caughtResponse = useCatch();
+  const message = caughtResponse.data?.message;
+  const random = caughtResponse.statusText;
+ 
 
-  const message = caughtResponse.data?.message || "Aluno não encontrado";
+  useEffect(() => {
+    const notify = () => toast.error(<div>{message}</div>);
+    notify();
+  }, [random, message]);
 
   return (
     <>
       <div className="h-screen w-full bg-stone-100 font-Roboto ">
+        <Toaster
+          toastOptions={{
+            className: "",
+            style: {
+              padding: "12px",
+               color: "#ffffff",
+              background: "#f78e34",
+            },
+          }}
+        />
         <Navbar />
 
         <div className="h-full mt-24 items-center flex flex-col gap-y-4">
@@ -83,7 +108,7 @@ export function CatchBoundary() {
               required
             />
             {/* <div className="text-red-500 text-center">{message}</div> */}
-            <div className="flex items-center rounded-lg  bg-amber-200 border-l-4 border-red-700 py-2 px-3 shadow-md mb-2">
+            {/* <div className="flex items-center rounded-lg  bg-amber-200 border-l-4 border-red-700 py-2 px-3 shadow-md mb-2">
               <div className="text-red-500  rounded-full bg-white mr-3">
                 <svg
                   width="1.8em"
@@ -105,7 +130,7 @@ export function CatchBoundary() {
               </div>
 
               <div className="text-amber-700 max-w-xs ">{message}</div>
-            </div>
+            </div> */}
             <div className="w-full text-center">
               <button
                 type="submit"
