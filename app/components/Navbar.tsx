@@ -45,6 +45,14 @@ export function Navbar() {
             }
           >
             AULAS
+          </NavLink>
+          <NavLink
+            to="/treinos"
+            className={({ isActive }) =>
+              isActive ? activeClassName : NoaActiveClassName
+            }
+          >
+            LISTA
           </NavLink> */}
         </div>
       </div>
