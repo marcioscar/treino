@@ -101,11 +101,25 @@ export default function Index() {
               <video controls poster="/como.jpg">
                 <source src="/treino.mp4" />
               </video>
-              {/* <embed src="/treino.mp4" height="30" width="144" /> */}
             </div>
-            {/* <div className="mb-2">
-              <img src="/black_judo.jpg" alt="black pilates" />
-            </div> */}
+            <div className="mb-2">
+              <img
+                src="/recesso_ballet infantil.jpg"
+                alt="recesso ballet infantil"
+              />
+            </div>
+            <div className="mb-2">
+              <img src="/recesso_ballet.jpg" alt="recesso ballet" />
+            </div>
+            <div className="mb-2">
+              <img src="/recesso_fitdance.jpg" alt="recesso fit" />
+            </div>
+            <div className="mb-2">
+              <img src="/recesso_judo.jpg" alt="recesso judo" />
+            </div>
+            <div className="mb-2">
+              <img src="/recesso_natacao.jpg" alt="recesso natacao" />
+            </div>
           </div>
         </div>
       </div>
