@@ -31,7 +31,6 @@ export const action: ActionFunction = async ({ request }) => {
   return redirect(`/aluno/${aluno.idMember}`);
 };
 
-
 export default function Index() {
   const transition = useTransition();
 
@@ -57,7 +56,11 @@ export default function Index() {
               font-semibold hover:bg-orange-400 
                hover:-translate-y-1"
             >
-              {transition.state === "submitting" ? "Localizando..." : "Entrar"}
+              {transition.state === "submitting"
+                ? "Localizando..."
+                : transition.state === "loading"
+                ? "Carregando Treino"
+                : "Entrar"}
             </button>
           </div>
         </Form>
@@ -71,7 +74,6 @@ export function CatchBoundary() {
   const caughtResponse = useCatch();
   const message = caughtResponse.data?.message;
   const random = caughtResponse.statusText;
- 
 
   useEffect(() => {
     const notify = () => toast.error(<div>{message}</div>);
@@ -86,7 +88,7 @@ export function CatchBoundary() {
             className: "",
             style: {
               padding: "12px",
-               color: "#ffffff",
+              color: "#ffffff",
               background: "#f78e34",
             },
           }}
@@ -139,9 +141,11 @@ export function CatchBoundary() {
               font-semibold hover:bg-orange-400 
                hover:-translate-y-1"
               >
-                {transition.state === "submitting"
-                  ? "Localizando..."
-                  : "Entrar"}
+                 {transition.state === "submitting"
+                ? "Localizando..."
+                : transition.state === "loading"
+                ? "Carregando Treino"
+                : "Entrar"}
               </button>
             </div>
           </Form>
