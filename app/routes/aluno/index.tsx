@@ -52,9 +52,11 @@ export default function Index() {
             <button
               type="submit"
               name="Entrar"
-              className="rounded-xl mt-2 bg-green-600 px-3 py-2 text-white 
-              font-semibold hover:bg-orange-400 
-               hover:-translate-y-1"
+              className={
+                "" + transition.state === "loading"
+                  ? "rounded-xl mt-2  bg-blue-600 px-3 py-2 text-white font-semibold"
+                  : "rounded-xl mt-2  bg-green-600 px-3 py-2 text-white font-semibold hover:bg-orange-400 hover:-translate-y-1"
+              }
             >
               {transition.state === "submitting"
                 ? "Localizando..."
@@ -137,15 +139,17 @@ export function CatchBoundary() {
               <button
                 type="submit"
                 name="Entrar"
-                className="rounded-xl mt-2 bg-green-600 px-3 py-2 text-white 
-              font-semibold hover:bg-orange-400 
-               hover:-translate-y-1"
+                className={
+                  "" + transition.state === "loading"
+                    ? "rounded-xl mt-2  bg-blue-600 px-3 py-2 text-white font-semibold"
+                    : "rounded-xl mt-2  bg-green-600 px-3 py-2 text-white font-semibold hover:bg-orange-400 hover:-translate-y-1"
+                }
               >
-                 {transition.state === "submitting"
-                ? "Localizando..."
-                : transition.state === "loading"
-                ? "Carregando Treino"
-                : "Entrar"}
+                {transition.state === "submitting"
+                  ? "Localizando..."
+                  : transition.state === "loading"
+                  ? "Carregando Treino"
+                  : "Entrar"}
               </button>
             </div>
           </Form>
