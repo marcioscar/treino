@@ -50,6 +50,10 @@ export default function Index() {
           />
           <div className="w-full text-center">
             <button
+              disabled={
+                transition.state === "submitting" ||
+                transition.state === "loading"
+              }
               type="submit"
               name="Entrar"
               className={
@@ -137,6 +141,10 @@ export function CatchBoundary() {
             </div> */}
             <div className="w-full text-center">
               <button
+                disabled={
+                  transition.state === "submitting" ||
+                  transition.state === "loading"
+                }
                 type="submit"
                 name="Entrar"
                 className={
