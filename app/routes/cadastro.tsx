@@ -125,6 +125,7 @@ export default function Cadastro() {
                           <option value="50">50 - (05/11 a 11/12)</option>
                           <option value="51">51 - (12/11 a 17/12)</option>
                           <option value="52">52 - (18/11 a 24/12)</option>
+                          <option value="53">53 - (25/11 a 01/12)</option>
                         </select>
                         <Errors className="text-red-500" />
                       </div>

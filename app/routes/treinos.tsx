@@ -39,8 +39,9 @@ export default function Treino() {
             <option value="48">48 - (21/11 a 27/11)</option>
             <option value="49">49 - (28/11 a 04/12)</option>
             <option value="50">50 - (05/11 a 11/12)</option>
-            <option value="51">51 - (12/11 a 17/12)</option>
-            <option value="52">52 - (18/11 a 24/12)</option>
+            <option value="51">51 - (12/12 a 17/12)</option>
+            <option value="52">52 - (18/12 a 24/12)</option>
+            <option value="53">53 - (25/12 a 31/12)</option>
           </select>
         </semana.Form>
       </div>
