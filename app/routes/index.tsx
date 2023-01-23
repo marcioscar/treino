@@ -102,7 +102,7 @@ export default function Index() {
                 <source src="/treino.mp4" />
               </video>
             </div>
-            <div className="mb-2">
+            {/* <div className="mb-2">
               <img
                 src="/recesso_ballet infantil.jpg"
                 alt="recesso ballet infantil"
@@ -119,7 +119,7 @@ export default function Index() {
             </div>
             <div className="mb-2">
               <img src="/recesso_natacao.jpg" alt="recesso natacao" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
