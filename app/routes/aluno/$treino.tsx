@@ -1,7 +1,13 @@
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { Form, useLoaderData, useTransition } from "@remix-run/react";
+import {
+  Form,
+  Link,
+  Outlet,
+  useLoaderData,
+  useTransition,
+} from "@remix-run/react";
 
 import {
   getAluno,
@@ -20,6 +26,7 @@ import {
   FaDumbbell,
   FaExclamationCircle,
 } from "react-icons/fa";
+import { FiVideo } from "react-icons/fi";
 import { Navbar } from "~/components/Navbar";
 
 type grupo = {
@@ -78,13 +85,13 @@ export default function Treino() {
     // @ts-ignore
     checked.includes(item)
       ? "bg-green-300 mb-2  font-light  p-2 rounded-lg  shadow-md"
-      : "bg-amber-50 mb-2  font-light  p-2 rounded-lg  ";
+      : "bg-stone-100 mb-2  font-light  p-2 rounded-lg  ";
 
   var isCheckedTitle = (item: any) =>
     // @ts-ignore
     checked.includes(item)
-      ? "text-decoration-line: line-through text-lg  "
-      : "text-lg text-green-600  ";
+      ? "text-decoration-line: line-through   "
+      : "text font-medium text-green-600  ";
 
   useEffect(() => {
     setTreino(
@@ -96,6 +103,7 @@ export default function Treino() {
 
   return (
     <>
+      <Outlet />
       <Navbar />
       <div className=" px-2 mx-auto ">
         <div className="text-center">
@@ -116,7 +124,7 @@ export default function Treino() {
               <div className="text-gray-500 grid  gap-2 grid-cols-3">
                 {ultimosTreinos.map((u: any, index) => (
                   <div key={index} className="">
-                    <div className="mt-1 mb-4  bg-amber-50 py-2 px-2 rounded-md my-4">
+                    <div className="mt-1 mb-4  bg-stone-100 py-2 px-2 rounded-md my-4">
                       <div className="font-semibold text-blue-600">
                         {u.treino}
                       </div>
@@ -183,10 +191,11 @@ export default function Treino() {
                 >
                   {e.exercicios.map((exe: any, index: any) => (
                     <div className={isChecked(exe.nome)} key={index}>
-                      <div className="flex flex-row justify-between ">
+                      <div className="flex mb-2 flex-row justify-between ">
                         <div className={isCheckedTitle(exe.nome)}>
                           {exe.nome}
                         </div>
+
                         <input
                           className=" w-6 h-6 accent-green-500 mr-4"
                           value={exe.nome}
@@ -206,10 +215,20 @@ export default function Treino() {
                         {exe.carga}
                       </div>
 
-                      <div className="flex shrink-0 items-center content-around lowercase ">
+                      <div className="flex mb-2  shrink-0 items-center content-around lowercase ">
                         <FaExclamationCircle className="shrink-0 mr-3" />
                         {exe.obs}
                       </div>
+                      {exe.video !== null && (
+                        <div className=" flex justify-end  text-l mr-4 text-white ">
+                          <Link
+                            className="bg-orange-300 rounded-lg px-6 p-2 "
+                            to={`${exe.video}`}
+                          >
+                            <FiVideo />
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

@@ -18,6 +18,7 @@ const schema = z.object({
   repeticoes: z.string().min(1, { message: "Repetições do exercício" }),
   carga: z.string().min(1, { message: "Informe as cargas do exercício " }),
   obs: z.string(),
+  video: z.string(),
 });
 const mutation = makeDomainFunction(schema)(async (values) => {
   const treinos = await updateTreino(values);
@@ -191,6 +192,54 @@ export default function Cadastro() {
                           className="rounded-md border-2 form-control block
                           w-full "
                         />
+                        <Errors className="text-red-500" />
+                      </div>
+                    </>
+                  )}
+                </Field>
+                <Field name="video" label="Video">
+                  {({ Label, Errors }) => (
+                    <>
+                      <div className="form-group">
+                        <Label className="form-label font-light inline-block  text-gray-400" />
+                        <select
+                          // type="number"
+                          {...register("video")}
+                          className="rounded-md border-2 form-control block
+                          w-full "
+                        >
+                          <option value="abd_declinado.gif">
+                            Abdominal Declinado
+                          </option>
+                          <option value="maquina.gif">Abdominal Máquina</option>
+                          <option value="crucifixo_reto_alteres.gif">
+                            Crucifixo reto com halteres
+                          </option>
+                          <option value="supino_maquina.gif">
+                            Supino Máquina
+                          </option>
+                          <option value="crucifixo_cross_over.gif">
+                            Crucifixo Cross Over
+                          </option>
+                          <option value="supino_inclinado.gif">
+                            Supino Inclinado
+                          </option>
+                          <option value="flying_reto_alternado.gif">
+                            flying Reto Alternado
+                          </option>
+                          <option value="elevacao_lateral_curvado.gif">
+                            Elevação Lateral Curvado
+                          </option>
+                          <option value="apoio_pe_banco.gif">
+                            Apoio Pé no banco
+                          </option>
+                          <option value="elevacao_lateral.gif">
+                            Elevação Lateral
+                          </option>
+                          <option value="remada_alta_barra.gif">
+                            Remada Alta com Barra{" "}
+                          </option>
+                        </select>
                         <Errors className="text-red-500" />
                       </div>
                     </>

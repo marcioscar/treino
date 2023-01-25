@@ -9,7 +9,7 @@ import {
 import { FaSave, FaTrash } from "react-icons/fa";
 export const loader: LoaderFunction = async ({ request, params }) => {
   const exercicio = await getExercicios(params.exe);
-  // console.log(exercicio);
+  console.log(params.exe);
   return exercicio;
 };
 export const action: ActionFunction = async ({ request, params }) => {
@@ -19,10 +19,11 @@ export const action: ActionFunction = async ({ request, params }) => {
   const carga = form.get("carga");
   const obs = form.get("obs");
   const execid = form.get("execid");
+  const video = form.get("video");
   const _action = form.get("_action");
   const id = params.exe;
   if (_action === "save") {
-    await updateCadastroTreino(id, nome, repeticoes, carga, obs, execid);
+    await updateCadastroTreino(id, nome, repeticoes, carga, obs, execid, video);
   }
   if (_action === "delete") {
     await deleteExercicio(id, execid);
@@ -44,6 +45,7 @@ export default function Treino() {
         <div className="col-span-3 font-light text-sm text-sky-500">
           Observação
         </div>
+        <div className="col-span-3 font-light text-sm text-sky-500">Video</div>
       </div>
       {exercicios.map((exec: any, index: any) => (
         <li key={exec.execid} className="py-1  ">
@@ -86,6 +88,13 @@ export default function Treino() {
                 id="obs"
                 name="obs"
                 defaultValue={exec.obs}
+                className="col-span-3 text-sm bg-stone-50 border-b-2"
+              />
+              <input
+                type="text"
+                id="video"
+                name="video"
+                defaultValue={exec.video}
                 className="col-span-3 text-sm bg-stone-50 border-b-2"
               />
               <div className="grid justify-items-center grid-cols-2 gap2">

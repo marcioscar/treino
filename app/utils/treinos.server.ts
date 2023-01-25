@@ -38,7 +38,8 @@ export const updateCadastroTreino = async (
   repeticoes: any,
   carga: any,
   obs: any,
-  execid: any
+  execid: any,
+  video: any
 ) => {
   return prisma.treinos.update({
     where: {
@@ -55,6 +56,7 @@ export const updateCadastroTreino = async (
             carga: carga,
             obs: obs,
             Repeticoes: repeticoes,
+            video: video,
           },
         },
       },
@@ -87,6 +89,8 @@ export const updateTreino = async (treino: any) => {
           Repeticoes: treino.repeticoes,
           carga: treino.carga,
           obs: treino.obs,
+          video: treino.video,
+          execid: uuidv4(),
         },
       },
     },
@@ -98,6 +102,7 @@ export const updateTreino = async (treino: any) => {
         Repeticoes: treino.repeticoes,
         carga: treino.carga,
         obs: treino.obs,
+        video: treino.video,
         execid: uuidv4(),
       },
     },

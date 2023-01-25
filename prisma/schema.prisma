@@ -18,6 +18,7 @@ type TreinosExercicios {
   execid     String?
   nome       String
   obs        String
+  video      String?
 }
 
 model historico {
