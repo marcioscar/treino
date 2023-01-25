@@ -124,7 +124,7 @@ export default function Treino() {
               <div className="text-gray-500 grid  gap-2 grid-cols-3">
                 {ultimosTreinos.map((u: any, index) => (
                   <div key={index} className="">
-                    <div className="mt-1 mb-4  bg-stone-100 py-2 px-2 rounded-md my-4">
+                    <div className="mt-1 mb-4  py-2 px-2 rounded-md my-4">
                       <div className="font-semibold text-blue-600">
                         {u.treino}
                       </div>
