@@ -37,6 +37,9 @@ export default function Treino() {
               <th scope="col" className="px-6 py-1 ">
                 Observações
               </th>
+              <th scope="col" className="px-6 py-1 ">
+                Video
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -54,6 +57,7 @@ export default function Treino() {
                 <td className="px-6 py-3 ">{exec.Repeticoes}</td>
                 <td className="px-6 py-3 ">{exec.carga}</td>
                 <td className="px-6 py-3 ">{exec.obs}</td>
+                <td className="px-6 py-3 ">{exec.video}</td>
               </tr>
             ))}
           </tbody>

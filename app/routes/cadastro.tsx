@@ -208,6 +208,7 @@ export default function Cadastro() {
                           className="rounded-md border-2 form-control block
                           w-full "
                         >
+                          <option value="">Selecione a máquina</option>
                           <option value="abd_declinado.gif">
                             Abdominal Declinado
                           </option>
