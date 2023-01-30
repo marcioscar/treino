@@ -219,7 +219,7 @@ export default function Treino() {
                         <FaExclamationCircle className="shrink-0 mr-3" />
                         {exe.obs}
                       </div>
-                      {exe.video !== null || ""  && (
+                      {exe.video !== "" && (
                         <div className=" flex justify-end  text-l mr-4 text-white ">
                           <Link
                             className="bg-orange-300 rounded-lg px-6 p-2 "
