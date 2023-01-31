@@ -212,34 +212,109 @@ export default function Cadastro() {
                           <option value="abd_declinado.gif">
                             Abdominal Declinado
                           </option>
-                          <option value="maquina.gif">Abdominal Máquina</option>
+                          <option value="abd_maquina.gif">
+                            Abdominal Máquina
+                          </option>
+                          <option value="agachamento.gif">Agachamento</option>
+                          <option value="apoio.gif">Apoio</option>
+                          <option value="apoio_pe_banco.gif">
+                            Apoio Pé no banco
+                          </option>
+                          <option value="barra_graviton.gif">
+                            Barra no Graviton
+                          </option>
+                          <option value="cadeira_extensora.gif">
+                            Cadeira Extensora
+                          </option>
                           <option value="crucifixo_reto_alteres.gif">
                             Crucifixo reto com halteres
                           </option>
-                          <option value="supino_maquina.gif">
-                            Supino Máquina
-                          </option>
-                          <option value="crucifixo_cross_over.gif">
+                          <option value="desenvolvimento_militar_sentado.gif">
                             Crucifixo Cross Over
                           </option>
-                          <option value="supino_inclinado.gif">
-                            Supino Inclinado
+                          <option value="crucifixo_cross_over.gif">
+                            Desenvolvimento Militar Sentado
                           </option>
-                          <option value="flying_reto_alternado.gif">
-                            flying Reto Alternado
+                          <option value="crucifixo_halteres.gif">
+                            Crucifixo com Halteres
+                          </option>
+                          <option value="crucifixo_invertido_maquina.gif">
+                            Crucifixo Invertido Máquina
+                          </option>
+                          <option value="desenvolvimento_halteres.gif">
+                            Desenvolvimento com Halteres
+                          </option>
+                          <option value="desenvolvimento_maquina.gif">
+                            Desenvolvimento Máquina
                           </option>
                           <option value="elevacao_lateral_curvado.gif">
                             Elevação Lateral Curvado
                           </option>
-                          <option value="apoio_pe_banco.gif">
-                            Apoio Pé no banco
+                          <option value="elevacao_frontal_alternado_sentado.gif">
+                            Elevação Frontal Alternado Sentado
                           </option>
                           <option value="elevacao_lateral.gif">
                             Elevação Lateral
                           </option>
+                          <option value="flying_reto_alternado.gif">
+                            flying Reto Alternado
+                          </option>
+                          <option value="levantamento_terra.gif">
+                            Levantamento Terra
+                          </option>
+                          <option value="leg_45.gif">Leg 45º</option>
+                          <option value="leg_horizontal.gif">
+                            Leg Horizontal
+                          </option>
+                          <option value="martelo_alternado.gif">
+                            Martelo Alternado
+                          </option>
                           <option value="remada_alta_barra.gif">
                             Remada Alta com Barra{" "}
                           </option>
+                          <option value="remada_sentada_triangulo.gif">
+                            Remada Sentada com Triangulo
+                          </option>
+                          <option value="rosca_direta_w.gif">
+                            Rosca Direta Barra 'W'
+                          </option>
+                          <option value="rosca_testa_halteres.gif">
+                            Rosca Testa Halteres
+                          </option>
+                          <option value="puxador_frente.gif">
+                            Puxador Frente
+                          </option>
+                          <option value="rosca_francesa_halteres.gif">
+                            Rosca Francesa Halteres
+                          </option>
+                          <option value="rosca_testa_barra.gif">
+                            Rosca Testa com Barra
+                          </option>
+                          <option value="paralela_maquina.gif">
+                            Paralela Máquina
+                          </option>
+                          <option value="pulldown_articulado.gif">
+                            Pull Down Articulado
+                          </option>
+                          <option value="pulldown_barra.gif">
+                            Pull Down com Barra
+                          </option>
+                          <option value="supino_maquina.gif">
+                            Supino Máquina
+                          </option>
+                          <option value="supino_inclinado.gif">
+                            Supino Inclinado
+                          </option>
+                          <option value="triceps_pulley_barra.gif">
+                            Triceps Pulley com Barra
+                          </option>
+                          <option value="triceps_pulley_corda.gif">
+                            Triceps Pulley com Corda
+                          </option>
+                          <option value="triceps_pulley_unilateral.gif">
+                            Triceps Pulley Unilateral
+                          </option>
+                          <option value="supino_reto.gif">Supino Reto</option>
                         </select>
                         <Errors className="text-red-500" />
                       </div>

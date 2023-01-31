@@ -17,7 +17,6 @@ export const getAluno = async (matricula: number) => {
     );
     return aluno.json();
   } catch (error) {
-    console.log("teste");
     throw error;
   }
 };

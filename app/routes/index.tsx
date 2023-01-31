@@ -5,15 +5,17 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { getAulas } from "~/utils/aulas.server";
 import { useLoaderData } from "@remix-run/react";
+import { getVendas } from "~/utils/recebimento.server";
 
 export const loader: LoaderFunction = async ({ request }) => {
   const TodasAulas = await getAulas();
+
   return json({ TodasAulas });
 };
 
 export default function Index() {
-  const { TodasAulas } = useLoaderData();
-
+  const { TodasAulas, vendas } = useLoaderData();
+  console.log(vendas);
   return (
     <>
       <Navbar />
