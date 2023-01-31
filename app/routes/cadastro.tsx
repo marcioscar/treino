@@ -5,9 +5,8 @@ import { Form, performMutation } from "remix-forms";
 import type { ActionFunction } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { updateTreino } from "~/utils/treinos.server";
-import { Outlet, useFetcher, useTransition } from "@remix-run/react";
-import { useEffect, useRef, useState } from "react";
-import { values } from "lodash";
+import { Outlet, useTransition } from "@remix-run/react";
+import { useEffect } from "react";
 
 const schema = z.object({
   grupo: z
