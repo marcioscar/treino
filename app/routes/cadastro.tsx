@@ -231,14 +231,14 @@ export default function Cadastro() {
                           <option value="desenvolvimento_militar_sentado.gif">
                             Crucifixo Cross Over
                           </option>
-                          <option value="crucifixo_cross_over.gif">
-                            Desenvolvimento Militar Sentado
-                          </option>
                           <option value="crucifixo_halteres.gif">
                             Crucifixo com Halteres
                           </option>
                           <option value="crucifixo_invertido_maquina.gif">
                             Crucifixo Invertido Máquina
+                          </option>
+                          <option value="crucifixo_cross_over.gif">
+                            Desenvolvimento Militar Sentado
                           </option>
                           <option value="desenvolvimento_halteres.gif">
                             Desenvolvimento com Halteres
@@ -256,7 +256,7 @@ export default function Cadastro() {
                             Elevação Lateral
                           </option>
                           <option value="flying_reto_alternado.gif">
-                            flying Reto Alternado
+                            Flying Reto Alternado
                           </option>
                           <option value="levantamento_terra.gif">
                             Levantamento Terra
@@ -267,6 +267,18 @@ export default function Cadastro() {
                           </option>
                           <option value="martelo_alternado.gif">
                             Martelo Alternado
+                          </option>
+                          <option value="paralela_maquina.gif">
+                            Paralela Máquina
+                          </option>
+                          <option value="pulldown_articulado.gif">
+                            Pull Down Articulado
+                          </option>
+                          <option value="pulldown_barra.gif">
+                            Pull Down com Barra
+                          </option>
+                          <option value="puxador_frente.gif">
+                            Puxador Frente
                           </option>
                           <option value="remada_alta_barra.gif">
                             Remada Alta com Barra{" "}
@@ -280,24 +292,14 @@ export default function Cadastro() {
                           <option value="rosca_testa_halteres.gif">
                             Rosca Testa Halteres
                           </option>
-                          <option value="puxador_frente.gif">
-                            Puxador Frente
-                          </option>
+
                           <option value="rosca_francesa_halteres.gif">
                             Rosca Francesa Halteres
                           </option>
                           <option value="rosca_testa_barra.gif">
                             Rosca Testa com Barra
                           </option>
-                          <option value="paralela_maquina.gif">
-                            Paralela Máquina
-                          </option>
-                          <option value="pulldown_articulado.gif">
-                            Pull Down Articulado
-                          </option>
-                          <option value="pulldown_barra.gif">
-                            Pull Down com Barra
-                          </option>
+
                           <option value="supino_maquina.gif">
                             Supino Máquina
                           </option>
