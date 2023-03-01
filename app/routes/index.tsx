@@ -91,6 +91,10 @@ export default function Index() {
                   <span className=" text-gray-900 ">Sábados e Feriados:</span>{" "}
                   8:00h às 12:00h
                 </p>
+                <p className="leading-relaxed  ">
+                  <span className=" text-gray-900 ">Domingos:</span> 8:00h às
+                  12:00h
+                </p>
               </div>
             </div>
             <div className="bg-white/75 overflow-auto rounded-lg mb-2 max-h-96 min-h-96 drop-shadow-2xl col-span-2">
